@@ -37,7 +37,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ route('task.index')}}">
-                        Add Task
+                        Task App
                     </a>
                 </div>
 

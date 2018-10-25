@@ -55,13 +55,12 @@ class LoginController extends Controller
             ->scopes(['read:user', 'public_repo'])
             ->redirect();
             
-        elseif ($driver ==  'facebook') //driver facebook 
-             return Socialite::driver('facebook')
-            ->scopes(['read:user', 'public_repo'])
+        elseif ($driver ==  'twitter') 
+             return Socialite::driver('twitter')
             ->redirect();
-        else  //driver linkedIn
-            return 0;
-
+        elseif ($driver ==  'facebook') 
+             return Socialite::driver('facebook')
+             ->redirect();
       
     }
 
@@ -74,7 +73,6 @@ class LoginController extends Controller
     {
 
         $user = Socialite::driver($provider)->user();
-
          $authUser = $this->findOrCreateUser($user, $provider);
         Auth::login($authUser, true);
         return redirect($this->redirectTo);

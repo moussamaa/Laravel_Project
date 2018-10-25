@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('login/{driver}', 'Auth\LoginController@redirectToProvider')->name ("LoginDriver");
+Route::get('login/{driver}/callback', 'Auth\LoginController@handleProviderCallback');
+
 Auth::routes();
 
 Route::resource('task','TaskController');
+

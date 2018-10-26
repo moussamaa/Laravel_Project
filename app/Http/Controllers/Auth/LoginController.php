@@ -105,5 +105,10 @@ public function logout(){
     Auth::logout(); 
     return redirect("/");
 }
+public function showLoginForm(){
+    Auth::logout(); 
+    return redirect("/");
+}
+ 
 
 }

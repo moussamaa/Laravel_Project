@@ -9,6 +9,7 @@
         "fideloper/proxy": "^4.0",
         "laravel-frontend-presets/bulma": "^2.0",
         "laravel/framework": "5.7.*",
+        "laravel/socialite": "^3.2",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {

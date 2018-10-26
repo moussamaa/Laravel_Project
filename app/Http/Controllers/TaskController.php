@@ -23,7 +23,7 @@ class TaskController extends Controller
     {
         //
         $result = Auth::user()->tasks()->get();
-        return view('task.index', ['tasks' => $result, 'image' => Auth::user()->image]);
+        return view('task.index', ['tasks' => $result]);
     }
 
     /**

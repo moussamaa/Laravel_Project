@@ -31,8 +31,9 @@
         </div>
 
         <div class="col-md-3">
-            <img class="img-responsive img-circle" src="{{asset('storage/'.$image)}}" width="100px" height="100px">
+            <img class="img-responsive img-circle" src="{{ Auth::user()->image }}" width="100px" height="100px">
         </div>
+
     </div>
 
 @endsection
